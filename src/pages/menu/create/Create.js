@@ -70,7 +70,6 @@ export default class Create extends Component {
               </View>
 
               <Button
-                onPress={launchImageLibrary()}
                 title="subir imagen"
                 color="green"
               />

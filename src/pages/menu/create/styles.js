@@ -8,14 +8,14 @@ export default StyleSheet.create({
       marginTop: '5%'
     },
     h1: {
+      fontFamily: 'montserrat-bold',
       fontSize: 20,
-      fontWeight: 'bold',
       marginTop: '5%',
       width: '100%'
     },
     h2: {
       fontSize: 15,
-      fontWeight: '500',
+      fontFamily: 'montserrat-bold',
       marginTop: '5%',
       width: '100%'
   
@@ -25,6 +25,7 @@ export default StyleSheet.create({
         marginTop: '10%'
     },
     labelInput: {
+      fontFamily: 'montserrat-semibold',
       paddingHorizontal: '2%',
       fontStyle: 'normal',
       fontWeight: '600',
@@ -40,7 +41,8 @@ export default StyleSheet.create({
       padding: '3%',
       paddingLeft: '10%',
       marginTop: '3%',
-      fontSize: 15,
+      fontSize: 13,
+      fontFamily: 'montserrat-semibold',
     },
     formContainer: {
       alignItems: 'center',
