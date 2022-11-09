@@ -2200,7 +2200,7 @@
   "resolved" "https://registry.npmjs.org/@react-native/assets/-/assets-1.0.0.tgz"
   "version" "1.0.0"
 
-"@react-native/normalize-color@^2.0.0", "@react-native/normalize-color@2.0.0":
+"@react-native/normalize-color@*", "@react-native/normalize-color@^2.0.0", "@react-native/normalize-color@2.0.0":
   "integrity" "sha512-Wip/xsc5lw8vsBlmY2MO/gFLp3MvuZ2baBZjDeTjjndMgM0h5sxz7AZR62RDPGgstp8Np7JzjvVqVT7tpFZqsw=="
   "resolved" "https://registry.npmjs.org/@react-native/normalize-color/-/normalize-color-2.0.0.tgz"
   "version" "2.0.0"
@@ -4561,6 +4561,15 @@
   "resolved" "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz"
   "version" "2.0.0"
 
+"deprecated-react-native-prop-types@^2.3.0":
+  "integrity" "sha512-pWD0voFtNYxrVqvBMYf5gq3NA2GCpfodS1yNynTPc93AYA/KEMGeWDqqeUB6R2Z9ZofVhks2aeJXiuQqKNpesA=="
+  "resolved" "https://registry.npmjs.org/deprecated-react-native-prop-types/-/deprecated-react-native-prop-types-2.3.0.tgz"
+  "version" "2.3.0"
+  dependencies:
+    "@react-native/normalize-color" "*"
+    "invariant" "*"
+    "prop-types" "*"
+
 "des.js@^1.0.0":
   "integrity" "sha512-Q0I4pfFrv2VPd34/vfLrFOoRmlYj3OV50i7fskps1jZWK1kApMWWT9G6RRUeYedLcBDIhnSDaUvJMb3AhUlaEA=="
   "resolved" "https://registry.npmjs.org/des.js/-/des.js-1.0.1.tgz"
@@ -6245,7 +6254,7 @@
     "has" "^1.0.3"
     "side-channel" "^1.0.4"
 
-"invariant@^2.2.4":
+"invariant@*", "invariant@^2.2.4":
   "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
   "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   "version" "2.2.4"
@@ -6977,27 +6986,27 @@
   "version" "2.4.0"
 
 "loader-utils@^1.1.0":
-  "integrity" "sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA=="
-  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.0.tgz"
-  "version" "1.4.0"
+  "integrity" "sha512-1Qo97Y2oKaU+Ro2xnDMR26g1BwMT29jNbem1EvcujW2jqt+j5COXyscjM7bLQkM9HaxI7pkWeW7gnI072yMI9Q=="
+  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.1.tgz"
+  "version" "1.4.1"
   dependencies:
     "big.js" "^5.2.2"
     "emojis-list" "^3.0.0"
     "json5" "^1.0.1"
 
 "loader-utils@^1.2.3":
-  "integrity" "sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA=="
-  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.0.tgz"
-  "version" "1.4.0"
+  "integrity" "sha512-1Qo97Y2oKaU+Ro2xnDMR26g1BwMT29jNbem1EvcujW2jqt+j5COXyscjM7bLQkM9HaxI7pkWeW7gnI072yMI9Q=="
+  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.1.tgz"
+  "version" "1.4.1"
   dependencies:
     "big.js" "^5.2.2"
     "emojis-list" "^3.0.0"
     "json5" "^1.0.1"
 
 "loader-utils@^1.4.0":
-  "integrity" "sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA=="
-  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.0.tgz"
-  "version" "1.4.0"
+  "integrity" "sha512-1Qo97Y2oKaU+Ro2xnDMR26g1BwMT29jNbem1EvcujW2jqt+j5COXyscjM7bLQkM9HaxI7pkWeW7gnI072yMI9Q=="
+  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.1.tgz"
+  "version" "1.4.1"
   dependencies:
     "big.js" "^5.2.2"
     "emojis-list" "^3.0.0"
@@ -7103,9 +7112,9 @@
     "yargs" "^15.1.0"
 
 "loglevel@^1.6.8":
-  "integrity" "sha512-G6A/nJLRgWOuuwdNuA6koovfEV1YpqqAG4pRUlFaz3jj2QNZ8M4vBqnVA+HBTmU/AMNUtlOsMmSpF6NyOjztbA=="
-  "resolved" "https://registry.npmjs.org/loglevel/-/loglevel-1.8.0.tgz"
-  "version" "1.8.0"
+  "integrity" "sha512-tCRIJM51SHjAayKwC+QAg8hT8vg6z7GSgLJKGvzuPb1Wc+hLzqtuVLxp6/HzSPOozuK+8ErAhy7U/sVzw8Dgfg=="
+  "resolved" "https://registry.npmjs.org/loglevel/-/loglevel-1.8.1.tgz"
+  "version" "1.8.1"
 
 "long@^4.0.0":
   "integrity" "sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA=="
@@ -8907,7 +8916,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2":
+"prop-types@*", "prop-types@^15.7.2":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -9212,6 +9221,11 @@
     "flow-parser" "^0.121.0"
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
+
+"react-native-element@^1.2.1":
+  "integrity" "sha512-fbkzGRNyu2b5vAQEBIAKAmiYoy2RNzf2DqHEJI3W/R+cGMdatDkXFXeQISEMziNdmeMUi5YuURZcf48J+xCb/w=="
+  "resolved" "https://registry.npmjs.org/react-native-element/-/react-native-element-1.2.1.tgz"
+  "version" "1.2.1"
 
 "react-native-expo-viewport-units@^0.0.8":
   "integrity" "sha512-duAEaoVF41puhXhpI1BuDFc2AMBqfWT2S74EJqaQ5dnuZVhsP++AExJwVo7/2/lHmb6+gYWGyBZOxxPCMWe+Ew=="
