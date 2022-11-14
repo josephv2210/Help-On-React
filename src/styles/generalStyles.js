@@ -18,12 +18,12 @@ export default StyleSheet.create({
     formContent: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: '80%',
+        width: '100%',
         marginTop: '5%'
     },
     formTextInput: {
         width: '100%',
-        marginTop: '10%'
+        marginTop: '5%'
     },
     labelInput: {
         fontFamily: 'montserrat-semibold',
@@ -34,7 +34,7 @@ export default StyleSheet.create({
         fontSize: 15
     },
     inputPlaceholder: {
-        marginTop: '5%',
+        marginTop: '2%',
         backgroundColor: '#FCFCFD',
         borderWidth: 1,
         borderColor: '#EFEFEF',
@@ -60,7 +60,32 @@ export default StyleSheet.create({
         color: '#FFFFFF'
     },
     formCheckBox: {
-
+        marginTop:10,
+        display:'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    labelCheck: {
+        fontFamily: 'montserrat-regular',
+        paddingHorizontal: '2%',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        color: '#323643',
+        fontSize: 12
+    },
+    redirectContainer:{
+        display: 'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        marginTop:15,
+    },
+    redirectText:{
+        fontFamily: 'montserrat-regular',
+        paddingHorizontal: '4%',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        color: '#C96C26',
+        fontSize: 12
     }
 
 })

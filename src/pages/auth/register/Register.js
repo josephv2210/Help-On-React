@@ -1,10 +1,13 @@
 import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import styles from './styles';
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import RegisterForm from '../../../components/account/RegisterForm';
+import gStyles from '../../../styles/generalStyles';
 
 const Register = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.scrollViewContainer}>
       <Image
@@ -16,29 +19,24 @@ const Register = () => {
         <Text style={styles.title}>
           Registrate
         </Text>
-        <RegisterForm/>
-        {/* <CreateAccount /> */}
+        <RegisterForm />
+
+        <View style={gStyles.redirectContainer}>
+          <Text
+            style={gStyles.redirectText}
+            onPress={() => console.log("olvido su contraseña")}
+            >¿Olvido su contraseña?</Text>
+          <Text
+            style={gStyles.redirectText}
+            onPress={() => navigation.navigate("login")}
+          >¿Ya tiene una cuenta?</Text>
+        </View>
+
       </View>
     </View>
   )
 
-  function CreateAccount(props) {
-  const navigation = useNavigation();
 
-    return (
-      <Text>
-        <Text
-          onPress={() => console.log("otro metodo")}
-        >Inicia con otro metodo</Text>
-        <Text
-          onPress={() => console.log("olvido su contraseña")}
-        >¿Olvido su contraseña?</Text>
-        <Text
-          onPress={() => navigation.navigate("¿Ya tienes una cuenta?")}
-        >Registrate</Text>
-      </Text>
-    )
-  }
 }
 
 export default Register

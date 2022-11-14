@@ -1,34 +1,51 @@
-import { StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-native'
+import { Image, Text, View, TextInput, TouchableHighlight } from 'react-native'
 // import Checkbox from 'expo-checkbox';
+import CheckBox from "expo-checkbox";
 import styles from './styles';
 import gStyles from '../../styles/generalStyles';
+import React, { Component, useState } from 'react'
 
-import React, { Component } from 'react'
+function Check(params) {
+    const [isChecked, setChecked] = useState(true);
+
+    params = isChecked;
+
+    return (
+        <View style={gStyles.formCheckBox}>
+            <CheckBox
+                style={gStyles.inputCheckBox}
+                value={isChecked}
+                onValueChange={setChecked}
+                color={isChecked ? '#C96C26' : undefined}
+            />
+            <Text style={gStyles.labelCheck}>Acepto terminos y condiciones</Text>
+        </View>
+    );
+}
 
 export default class RegisterForm extends Component {
-
+    
     state = {
-        nameProyect: '',
         email: '',
         password: '',
-        terms: false
+        terms: true
     }
 
     onSubmitEdit = () => {
+        // this.setState({ terms: this.isChecked })
         console.log(this.state)
     }
 
-    handleNameProyect = (text) => {
-        this.setState({ nameProyect: text })
-    }
-    handleEmail= (text) => {
+    handleEmail = (text) => {
         this.setState({ email: text })
     }
-    handlePassword= (text) => {
+    handlePassword = (text) => {
         this.setState({ password: text })
     }
-    handleTerms= () => {
-        this.setState({ terms: !terms })
+
+
+    googleRegister = () => {
+        console.log("Inicia registro con google")
     }
 
     render() {
@@ -36,18 +53,6 @@ export default class RegisterForm extends Component {
             <View>
                 <View style={gStyles.formContainer}>
                     <View style={gStyles.formContent} >
-
-                        <View style={gStyles.formTextInput}>
-                            <Text style={gStyles.labelInput}>Nombre</Text>
-                            <TextInput
-                                style={gStyles.inputPlaceholder}
-                                placeholder="Nombre"
-                                keyboardType="default"
-                                placeholderTextColor="#B9BCBE"
-                                autoCapitalize="none"
-                                onChangeText={this.handleNameProyect}
-                            />
-                        </View>
 
                         <View style={gStyles.formTextInput}>
                             <Text style={gStyles.labelInput}>Correo</Text>
@@ -73,22 +78,24 @@ export default class RegisterForm extends Component {
                                 secureTextEntry={true}
                             />
                         </View>
-                        
-                        {/* <View style={gStyles.formCheckBox}>
-                            <Text style={gStyles.labelInput}>Contraseña</Text>
-                            <Checkbox
-                                style={gStyles.inputPlaceholder}
-                                onChangeValue={this.handlePassword}
-                                value={this.state.terms}
-                                secureTextEntry={true}
-                                color={isChecked ? '#4630EB' : undefined}
-                            />
-                        </View> */}
 
+                        <Check
+                            isChecked='true'
+                        />
+
+                        <TouchableHighlight onPress={this.googleRegister}>
+                            <Image
+                                style={styles.googleImage}
+                                source={require('../../../src/assets/Icons/google-plus.png')}
+                            />
+                        </TouchableHighlight>
+                        <Text style={gStyles.labelCheck}>Iniciar sesión por otro metodo</Text>
 
                         <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
                             <Text style={gStyles.standarButtonLabel}>REGISTRARSE</Text>
                         </TouchableHighlight>
+
+                        
 
                     </View>
                 </View>
