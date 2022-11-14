@@ -40,22 +40,6 @@ export const BottomTab = () => {
                     }}
                 />
                 <Tab.Screen
-                    name="Buscar"
-                    component={Search}
-                    options={{
-                        tabBarIcon: () => (
-                            <Svg
-                                width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            >
-                                <G>
-                                    <Path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#857B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <Path d="M21 21L16.65 16.65" stroke="#857B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </G>
-                            </Svg>
-                        )
-                    }}
-                />
-                <Tab.Screen
                     name="Crear nuevo proyecto"
                     component={Create}
                     options={{
@@ -71,22 +55,6 @@ export const BottomTab = () => {
                             </Svg>
                         ),
                         title: 'Crear nuevo proyecto'
-                    }}
-                />
-                <Tab.Screen
-                    name="Notification"
-                    component={Notification}
-                    options={{
-                        tabBarIcon: () => (
-                            <Svg
-                                width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            >
-                                <G>
-                                    <Path d="M17.8249 8.07769C17.8249 6.53283 17.2112 5.05125 16.1188 3.95888C15.0264 2.8665 13.5449 2.25281 12 2.25281C10.4551 2.25281 8.97357 2.8665 7.88119 3.95888C6.78881 5.05125 6.17512 6.53283 6.17512 8.07769C6.17512 14.8734 3.26268 16.815 3.26268 16.815H20.7373C20.7373 16.815 17.8249 14.8734 17.8249 8.07769Z" stroke="#857B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <Path d="M14.2358 20.4596C14.0086 20.8513 13.6825 21.1764 13.2901 21.4024C12.8977 21.6284 12.4528 21.7474 12 21.7474C11.5472 21.7474 11.1023 21.6284 10.7099 21.4024C10.3176 21.1764 9.99145 20.8513 9.76424 20.4596" stroke="#857B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </G>
-                            </Svg>
-                        )
                     }}
                 />
                 <Tab.Screen

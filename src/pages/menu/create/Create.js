@@ -3,44 +3,14 @@ import { Image, Text, View, TextInput, TouchableHighlight, SafeAreaView, ScrollV
 import styles from './styles';
 import gStyles from '../../../styles/generalStyles';
 import React, { Component, useState } from 'react'
-
-export default class Create extends Component {
-  state = {
-    name: '',
-    description: '',
-    category: '',
-    tags: '',
-    location: '',
-    doing: ''
-  }
-
-  onSubmitEdit = () => {
-    // this.setState({ terms: this.isChecked })
-    console.log(this.state)
-  }
-
-  handleProyectName = (text) => {
-    this.setState({ name: text })
-  }
-  handleDescription = (text) => {
-    this.setState({ description: text })
-  }
-  handleCategory = (text) => {
-    this.setState({ category: text })
-  }
-  handleTags = (text) => {
-    this.setState({ tags: text })
-  }
-  handleLocation = (text) => {
-    this.setState({ location: text })
-  }
-  handleDoing = (text) => {
-    this.setState({ doing: text })
-  }
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import CreateForm from '../../../components/account/CreateForm';
+import {map, size} from 'lodash'
 
 
+export default function() {
+  const [imagesSelected, setImagesSelected] = useState([])  
 
-  render() {
     return (
       <SafeAreaView>
         <ScrollView>
@@ -49,77 +19,11 @@ export default class Create extends Component {
               <View style={gStyles.formContent} >
                 <Text style={gStyles.h2}>Nos alegra que te unas a nosotros</Text>
 
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>Nombre del proyecto</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Nombre del proyecto"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleProyectName}
-                  />
-                </View>
+                <CreateForm/>
 
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>Descripción</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Descripción"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleDescription}
-                  />
-                </View>
-
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>Categoria</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Categoria"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleCategory}
-                  />
-                </View>
-
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>Etiquetas (Animales, Salud, Alimento)</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Etiquetas"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleTags}
-                  />
-                </View>
-
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>Ubicación</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Ubicación"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleLocation}
-                  />
-                </View>
-
-                <View style={gStyles.formTextInput}>
-                  <Text style={gStyles.labelInput}>¿Que ha hecho usted por este proyecto?</Text>
-                  <TextInput
-                    style={gStyles.inputPlaceholder}
-                    placeholder="Descripción"
-                    keyboardType="text"
-                    placeholderTextColor="#B9BCBE"
-                    autoCapitalize="none"
-                    onChangeText={this.handleDoing}
-                  />
-                </View>
+                <UploadImage
+                  
+                />
 
                 <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
                   <Text style={gStyles.standarButtonLabel}>PROPONER</Text>
@@ -133,5 +37,19 @@ export default class Create extends Component {
         </ScrollView>
       </SafeAreaView>
     )
-  }
+}
+
+function UploadImage() {
+    return(
+      <ScrollView
+        style={styles.viewImage}
+      >
+        <View style={styles.containerIcon}>
+        <Image
+          style={styles.icon}
+          source={require('../../../assets/Icons/camera.png')}
+        />
+        </View>
+      </ScrollView>
+    )
 }

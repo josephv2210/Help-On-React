@@ -31,7 +31,8 @@ export default StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '600',
         color: '#323643',
-        fontSize: 15
+        fontSize: 15,
+        width: '100%'
     },
     inputPlaceholder: {
         marginTop: '2%',

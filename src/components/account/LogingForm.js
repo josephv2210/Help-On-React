@@ -27,10 +27,10 @@ export default class LogingForm extends Component {
         console.log("Inicia registro con google")
     }
 
-  render() {
-    return (
-      <View>
-        <View style={gStyles.formContainer}>
+    render() {
+        return (
+            <View>
+                <View style={gStyles.formContainer}>
                     <View style={gStyles.formContent} >
 
                         <View style={gStyles.formTextInput}>
@@ -70,11 +70,11 @@ export default class LogingForm extends Component {
                             <Text style={gStyles.standarButtonLabel}>INICIAR SESIÓN</Text>
                         </TouchableHighlight>
 
-                        
+
 
                     </View>
                 </View>
-      </View>
-    )
-  }
+            </View>
+        )
+    }
 }
