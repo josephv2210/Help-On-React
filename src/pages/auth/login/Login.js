@@ -1,7 +1,7 @@
 import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import styles from './styles';
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 
 const Login = () => {
   return (
@@ -24,7 +24,7 @@ const Login = () => {
   )
 
   function CreateAccount(props) {
-  const navigation = useNavigation();
+    const navigation = useNavigation();
 
     return (
       <Text>
