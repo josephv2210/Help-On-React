@@ -3,24 +3,30 @@ import React from 'react'
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native'
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth } from "firebase/auth";
+import gStyles from '../../../styles/generalStyles';
+import LogingForm from '../../../components/account/LogingForm';
 
-const handleLogin = getAuth();
-signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-  // 
-  const user = userCredential.user;
-  console.log('Registered with: ', user.email);
-})
-.catch((error) => {
-  const errorCode = error.code;
-  const errorMessage = error.message;
-  // ..
-});
+
+// const handleLogin = getAuth();
+// signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+//   // 
+//   const user = userCredential.user;
+//   console.log('Registered with: ', user.email);
+// })
+// .catch((error) => {
+//   const errorCode = error.code;
+//   const errorMessage = error.message;
+//   // ..
+// });
 
 const Login = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.scrollViewContainer}>
       <Image
-        source={require("../../../assets/resourses/svg/login.png")}
+        source={require("../../../assets/resourses/svg/register.png")}
         resizeMode="contain"
         style={styles.bkImage}
       />
@@ -28,31 +34,24 @@ const Login = () => {
         <Text style={styles.title}>
           Iniciar Seción
         </Text>
-        <Text>
-          hola
-        </Text>
-        <CreateAccount />
+
+        <LogingForm/>
+
+        <View style={gStyles.redirectContainer}>
+          <Text
+            style={gStyles.redirectText}
+            onPress={() => console.log("olvido su contraseña")}
+            >¿Olvido su contraseña?</Text>
+          <Text
+            style={gStyles.redirectText}
+            onPress={() => navigation.navigate("register")}
+          >¿No tiene una cuenta?</Text>
+        </View>
       </View>
     </View>
   )
 
-  function CreateAccount(props) {
-    const navigation = useNavigation();
-
-    return (
-      <Text>
-        <Text
-          onPress={() => console.log("otro metodo")}
-        >Inicia con otro metodo</Text>
-        <Text
-          onPress={() => console.log("olvido su contraseña")}
-        >¿Olvido su contraseña?</Text>
-        <Text
-          onPress={() => navigation.navigate("register")}
-        >Registrate</Text>
-      </Text>
-    )
-  }
+  
 }
 
 export default Login

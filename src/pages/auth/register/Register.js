@@ -5,17 +5,17 @@ import { useNavigation } from '@react-navigation/native'
 import RegisterForm from '../../../components/account/RegisterForm';
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 
-const handleSignup = getAuth();
-createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-  // 
-  const user = userCredential.user;
-  console.log('Registered with: ', user.email);
-})
-.catch((error) => {
-  const errorCode = error.code;
-  const errorMessage = error.message;
-  // ..
-});
+// const handleSignup = getAuth();
+// createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+//   // 
+//   const user = userCredential.user;
+//   console.log('Registered with: ', user.email);
+// })
+// .catch((error) => {
+//   const errorCode = error.code;
+//   const errorMessage = error.message;
+//   // ..
+// });
 
 import gStyles from '../../../styles/generalStyles';
 
@@ -36,10 +36,6 @@ const Register = () => {
         <RegisterForm />
 
         <View style={gStyles.redirectContainer}>
-          <Text
-            style={gStyles.redirectText}
-            onPress={() => console.log("olvido su contraseña")}
-            >¿Olvido su contraseña?</Text>
           <Text
             style={gStyles.redirectText}
             onPress={() => navigation.navigate("login")}
