@@ -56,7 +56,7 @@ export const BottomTab = () => {
                     }}
                 />
                 <Tab.Screen
-                    name="Crear"
+                    name="Crear nuevo proyecto"
                     component={Create}
                     options={{
                         tabBarIcon: () => (
@@ -69,7 +69,8 @@ export const BottomTab = () => {
                                     <Path d="M34 28L22 28" stroke="white" stroke-width="2" stroke-linecap="round" />
                                 </G>
                             </Svg>
-                        )
+                        ),
+                        title: 'Crear nuevo proyecto'
                     }}
                 />
                 <Tab.Screen
