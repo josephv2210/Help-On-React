@@ -39,7 +39,7 @@ export default class CreateForm extends Component {
 
     render() {
         return (
-            <View>
+            <View style={gStyles.formContent}>
                 <View style={[gStyles.formTextInput ]}>
                     <Text  style={[gStyles.labelInput ,styles.icontent]}>Nombre del proyecto</Text>
                     <TextInput
@@ -111,6 +111,10 @@ export default class CreateForm extends Component {
                         onChangeText={this.handleDoing}
                     />
                 </View>
+
+                <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
+                  <Text style={gStyles.standarButtonLabel}>PROPONER</Text>
+                </TouchableHighlight>
             </View>
 
         )

@@ -25,9 +25,7 @@ export default function() {
                   
                 />
 
-                <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
-                  <Text style={gStyles.standarButtonLabel}>PROPONER</Text>
-                </TouchableHighlight>
+                
 
 
 
