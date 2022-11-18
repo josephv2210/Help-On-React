@@ -2,14 +2,14 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     h1: {
-        fontFamily: 'montserrat-bold',
+        fontFamily: 'montserratBold',
         fontSize: 20,
         marginTop: '5%',
         width: '100%'
     },
     h2: {
         fontSize: 15,
-        fontFamily: 'montserrat-bold',
+        fontFamily: 'montserratBold',
         marginTop: '5%',
         width: '100%'
 

@@ -29,7 +29,7 @@ export default StyleSheet.create({
         shadowColor: '#52006A'
     },
     title: {
-        fontFamily: 'montserrat-bold',
+        fontFamily: 'montserratBold',
         fontSize: 20,
         marginTop: '5%',
         width: '100%',

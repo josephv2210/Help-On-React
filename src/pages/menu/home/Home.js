@@ -413,14 +413,14 @@ const styles = StyleSheet.create({
 
   },
   textTitlePrin: {
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     fontSize: 34,
     fontWeight: 'bold',
     color: '#323643',
     padding: 15,
   },
   searchBarInput: {
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     fontSize: 18,
     fontWeight: 'bold',
     borderWidth: 0.5,
@@ -432,13 +432,13 @@ const styles = StyleSheet.create({
 
   },
   searchBarCont:{
-    justifyContent: 'center',
+    // justifyContent: 'center',
     paddingLeft: 20,
     paddingRight: 20,
   },
   nomProAct: {
     fontSize: 25,
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     marginTop: '5%',
     width: '100%',
     fontWeight: 'bold',
@@ -447,7 +447,7 @@ const styles = StyleSheet.create({
   },  
   nomProCat: {
     fontSize: 20,
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     marginTop: '5%',
     width: '100%',
     fontWeight: 'bold',
@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
     padding: 0,
     borderRadius: 10,
     marginTop: 15,
-    justifyContent: 'espace-between',
+    // justifyContent: 'espace-between',
     left: 30
 
   },
@@ -471,7 +471,7 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 10,
   },
   tTitle: {
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     paddingHorizontal: 13,
     paddingTop: 5,
     paddingBottom: 10,
@@ -516,14 +516,14 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   }, 
   tRecPre: {
-    fontFamily: 'montserrat-bold',
+    // fontFamily: 'montserratBold',
     paddingHorizontal: 5,
     paddingTop: 5,
     paddingBottom: 10,
     color: '#029094',
   },
   tRec: {
-    fontFamily: 'montserrat',
+    // // fontFamily: 'montserratBold',
     paddingHorizontal: 13,
     paddingTop: 5,
     paddingBottom: 10,
