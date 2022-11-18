@@ -1,8 +1,23 @@
-import { View, Text, Image, ScrollView, SafeAreaView, TouchableHighlight } from 'react-native'
+import { View, Text, Image, ScrollView, SafeAreaView, TouchableHighlight, Alert } from 'react-native'
 import React from 'react'
 import styles from './style'
 import gStyles from '../../../styles/generalStyles';
 
+
+const showAlert = () =>
+  Alert.alert(
+    "user-not-found: ",
+    "There is no user record corresponding to this identifier. The user may have been deleted.",
+    [
+      {
+        text: "OK",
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
 
 const ProjectDetails = () => {
   return (
@@ -89,7 +104,7 @@ const ProjectDetails = () => {
             </View>
           </View>
 
-          <TouchableHighlight style={[gStyles.standarButton, gStyles.standarButtonSize]} >
+          <TouchableHighlight style={[gStyles.standarButton, gStyles.standarButtonSize]} onPress={showAlert}>
             <Text style={gStyles.standarButtonLabel}>DONAR</Text>
           </TouchableHighlight>
 
