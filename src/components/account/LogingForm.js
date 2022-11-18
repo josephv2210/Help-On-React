@@ -1,9 +1,38 @@
-import { Image, Text, View, TextInput, TouchableHighlight } from 'react-native'
+import { Image, Text, View, TextInput, TouchableHighlight, Alert } from 'react-native'
 // import Checkbox from 'expo-checkbox';
 import styles from './styles';
 import gStyles from '../../styles/generalStyles';
 import React, { Component, useState } from 'react'
 
+const showAlert = () =>
+  Alert.alert(
+    "invalid-oauth-client-id: ",
+    "The OAuth client ID provided is either invalid or does not match the specified API key.",
+    [
+      {
+        text: "OK",
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
+
+  const Alert2 = () =>
+  Alert.alert(
+    "network-request-failed: ",
+    "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
+    [
+      {
+        text: "OK",
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
 export default class LogingForm extends Component {
     state = {
         email: '',
@@ -58,7 +87,7 @@ export default class LogingForm extends Component {
                             />
                         </View>
 
-                        <TouchableHighlight onPress={this.googleRegister}>
+                        <TouchableHighlight onPress={Alert2}>
                             <Image
                                 style={styles.googleImage}
                                 source={require('../../../src/assets/Icons/google-plus.png')}
@@ -66,7 +95,7 @@ export default class LogingForm extends Component {
                         </TouchableHighlight>
                         <Text style={gStyles.labelCheck}>Iniciar sesión por otro metodo</Text>
 
-                        <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
+                        <TouchableHighlight style={gStyles.standarButton} onPress={showAlert}>
                             <Text style={gStyles.standarButtonLabel}>INICIAR SESIÓN</Text>
                         </TouchableHighlight>
 
