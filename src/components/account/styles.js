@@ -8,6 +8,9 @@ export default StyleSheet.create({
   googleImageItems: {
     display:'flex',
     
+  },
+  icontent:{
+    width: 330
   }
   
   })
