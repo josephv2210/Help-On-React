@@ -1,9 +1,8 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import Register from '../pages/auth/register/Register'
-import Login from '../pages/auth/login/Login'
 import Home from '../pages/menu/home/Home'
-import ProjectDatails from '../pages/project/projectDetails/ProjectDetails'
+import ProjectDetails from '../pages/project/projectDetails/ProjectDetails'
+import ProjectList from '../pages/project/projectList/ProjectList'
 
 
 const Stack = createStackNavigator()
@@ -21,12 +20,18 @@ export default function HomeStack() {
                 }}
             />
             <Stack.Screen
-                name="projectDetail"
-                component={ProjectDatails}
+                name="projectDetails"
+                component={ProjectDetails}
                 options={{
                     title: "Detalle del proyecto"
                 }}
-
+            />
+            <Stack.Screen
+                name="projectList"
+                component={ProjectList}
+                options={{
+                    title: "Listas de proyectos"
+                }}
             />
         </Stack.Navigator>
     )

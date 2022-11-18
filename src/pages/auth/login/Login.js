@@ -1,10 +1,10 @@
 import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import styles from './styles';
+import gStyles from '../../../styles/generalStyles';
 import { useNavigation } from '@react-navigation/native'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { getAuth } from "firebase/auth";
-import gStyles from '../../../styles/generalStyles';
 import LogingForm from '../../../components/account/LogingForm';
 
 

@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "../pages/auth/login/Login";
 import AccountStack from "./AccountStack"
+import HomeStack from "./HomeStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,8 +27,10 @@ export const BottomTab = () => {
             >
                 <Tab.Screen
                     name="Inicio"
-                    component={Home}
+                    component={HomeStack}
+                    headerShown = {false}
                     options={{
+                        headerShown: false,
                         tabBarIcon: () => (
                             <Svg
                                 width="24" height="24" viewBox="0 0 24 24" fill="none"
