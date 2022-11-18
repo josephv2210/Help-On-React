@@ -3,21 +3,17 @@ import { View, StyleSheet, Button, Alert } from "react-native";
 
 const showAlert = () =>
   Alert.alert(
-    "Error de base de datos",
-    "Los datos no han sido guardados",
+    "Server connection Error NavigationContainerInner@http://192.168.0.20:19000 ",
+    "Data has been lost",
     [
       {
-        text: "Salir",
+        text: "OK",
         onPress: () => Alert.alert("Salir presionado"),
         style: "cancel",
       },
     ],
     {
       cancelable: true,
-      onDismiss: () =>
-        Alert.alert(
-          "Esta alerta fue descartada al tocar fuera del cuadro de alerta."
-        ),
     }
   );
 

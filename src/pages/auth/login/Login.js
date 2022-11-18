@@ -6,9 +6,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { getAuth } from "firebase/auth";
 import gStyles from '../../../styles/generalStyles';
 import LogingForm from '../../../components/account/LogingForm';
-import { shouldRasterizeIOS } from 'deprecated-react-native-prop-types/DeprecatedViewPropTypes';
-import Alerta, { showAlert } from '../../../components/account/Alert';
-
 
 // const handleLogin = getAuth();
 // signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
@@ -33,7 +30,7 @@ const Login = () => {
         style={styles.bkImage}
       />
       <View style={[styles.upContainer, styles.shadowProp]}>
-        <Text style={styles.title}>
+        <Text style={styles.title} onPress={showAlert}>
           Iniciar Sesión
         </Text>
 
@@ -42,7 +39,8 @@ const Login = () => {
         <View style={gStyles.redirectContainer}>
           <Text
             style={gStyles.redirectText}
-            onPress={() => console.log("olvido su contraseña")}
+            //onPress={() => console.log("olvido su contraseña")}
+            onPress={showAlert}
             >¿Olvido su contraseña?</Text>
           <Text
             style={gStyles.redirectText}
@@ -55,5 +53,19 @@ const Login = () => {
 
   
 }
+const showAlert = () =>
+  Alert.alert(
+    "invalid-oauth-client-id: ",
+    "The OAuth client ID provided is either invalid or does not match the specified API key.",
+    [
+      {
+        text: "OK",
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
 
 export default Login
