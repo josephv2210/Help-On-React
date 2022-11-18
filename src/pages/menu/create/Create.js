@@ -20,15 +20,6 @@ export default function() {
                 <Text style={gStyles.h2}>Nos alegra que te unas a nosotros</Text>
 
                 <CreateForm/>
-
-                <UploadImage
-                  
-                />
-
-                
-
-
-
               </View>
             </View>
           </View>

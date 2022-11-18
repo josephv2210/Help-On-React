@@ -22,8 +22,10 @@ export const BottomTab = () => {
                 initialRouteName="Home"
                 screenOptions={{
                     innactiveTintColor: "#857B7C",
-                    activeTintColor: "#231E1A"
+                    activeTintColor: "#231E1A",
+                    title: 'Help On'
                 }}
+                
             >
                 <Tab.Screen
                     name="Inicio"

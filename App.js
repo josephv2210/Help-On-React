@@ -4,16 +4,19 @@ import { BottomTab } from './src/navigation/BottomTab';
 import * as Font from 'expo-font';
 
 export default class App extends React.Component {
-  componentDidMount() {
-    this.loadFonts();
-  }
 
-  loadFonts(){
-    Font.loadAsync({
-      'montserrat-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
-      'montserrat-semibold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
-      'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
-    });
+  async componentDidMount () {
+    try {
+        await Font.loadAsync({
+          'montserrat-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
+          'montserratBold': require('./assets/fonts/Montserrat-Bold.ttf'),
+          'montserrat-semibold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+          'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+        });
+
+      }catch(error){
+        console.log('error loading fonts', error)
+      }
   }
 
   render() {

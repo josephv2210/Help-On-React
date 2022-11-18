@@ -1,8 +1,23 @@
-import { Image, Text, View, TextInput, TouchableHighlight, SafeAreaView, ScrollView } from 'react-native'
+import { Image, Text, View, TextInput, TouchableHighlight, SafeAreaView, ScrollView, Alert } from 'react-native'
 import styles from './styles';
 import React, { Component } from 'react'
 import gStyles from '../../styles/generalStyles'
+import Alerta from './Alert';
 
+const showAlert = () =>
+  Alert.alert(
+    "Server connection Error NavigationContainerInner@http://192.168.0.20:19000 ",
+    "Data has been lost",
+    [
+      {
+        text: "OK",
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
 export default class CreateForm extends Component {
     state = {
         name: '',
@@ -15,7 +30,8 @@ export default class CreateForm extends Component {
 
     onSubmitEdit = () => {
         // this.setState({ terms: this.isChecked })
-        console.log(this.state)
+        console.log(this.state);
+        //onPress= {showAlert}
     }
 
     handleProyectName = (text) => {
@@ -112,7 +128,7 @@ export default class CreateForm extends Component {
                     />
                 </View>
 
-                <TouchableHighlight style={gStyles.standarButton} onPress={this.onSubmitEdit}>
+                <TouchableHighlight style={gStyles.standarButton} onPress={showAlert}>
                   <Text style={gStyles.standarButtonLabel}>PROPONER</Text>
                 </TouchableHighlight>
             </View>
