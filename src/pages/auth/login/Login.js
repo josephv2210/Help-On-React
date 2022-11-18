@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, ScrollView, Alert } from 'react-native'
 import React from 'react'
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native'
@@ -6,6 +6,8 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { getAuth } from "firebase/auth";
 import gStyles from '../../../styles/generalStyles';
 import LogingForm from '../../../components/account/LogingForm';
+import { shouldRasterizeIOS } from 'deprecated-react-native-prop-types/DeprecatedViewPropTypes';
+import Alerta, { showAlert } from '../../../components/account/Alert';
 
 
 // const handleLogin = getAuth();
@@ -32,7 +34,7 @@ const Login = () => {
       />
       <View style={[styles.upContainer, styles.shadowProp]}>
         <Text style={styles.title}>
-          Iniciar Seción
+          Iniciar Sesión
         </Text>
 
         <LogingForm/>
