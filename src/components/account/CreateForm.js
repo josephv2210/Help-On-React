@@ -6,8 +6,8 @@ import Alerta from './Alert';
 
 const showAlert = () =>
   Alert.alert(
-    "Server connection Error NavigationContainerInner@http://192.168.0.20:19000 ",
-    "Data has been lost",
+    "Usuario invalido",
+    "Por favor inicie sesión para acceder a la totalidad de la aplicación",
     [
       {
         text: "OK",

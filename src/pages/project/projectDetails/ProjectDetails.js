@@ -6,8 +6,8 @@ import gStyles from '../../../styles/generalStyles';
 
 const showAlert = () =>
   Alert.alert(
-    "user-not-found: ",
-    "There is no user record corresponding to this identifier. The user may have been deleted.",
+    "Usuario invalido",
+    "Por favor inicie sesión para acceder a la totalidad de la aplicación",
     [
       {
         text: "OK",
