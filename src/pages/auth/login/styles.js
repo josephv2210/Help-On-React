@@ -16,10 +16,10 @@ export default StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderTopLeftRadius: 60,
         borderTopRightRadius: 60,
-        paddingVertical: 45,
+        paddingVertical: 20,
         paddingHorizontal: 45,
         width: '100%',
-        height: '50%',
+        height: '75%',
     },
     shadowProp: {
         shadowOffset: { width: 0, height: 0 },

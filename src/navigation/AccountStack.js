@@ -9,7 +9,7 @@ const Stack = createStackNavigator()
 export default function AccountStack() {
     return (
         <Stack.Navigator
-            initialRouteName="register"
+            initialRouteName="login"
         >
             <Stack.Screen
                 name="login"

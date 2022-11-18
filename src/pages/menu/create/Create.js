@@ -1,83 +1,53 @@
-import { View, Text, TextInput, Alert, ScrollView, } from 'react-native'
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
-import React, { Component } from 'react'
+import { Image, Text, View, TextInput, TouchableHighlight, SafeAreaView, ScrollView } from 'react-native'
+// import Checkbox from 'expo-checkbox';
 import styles from './styles';
-import { Button } from '@rneui/base';
+import gStyles from '../../../styles/generalStyles';
+import React, { Component, useState } from 'react'
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import CreateForm from '../../../components/account/CreateForm';
+import {map, size} from 'lodash'
 
 
-export default class Create extends Component {
+export default function() {
+  const [imagesSelected, setImagesSelected] = useState([])  
 
-  render() {
     return (
+      <SafeAreaView>
         <ScrollView>
-          <View style={styles.formContainer}>
-            <View style={styles.formContent} >
-              <Text style={styles.h1}>Crear nuevo proyecto</Text>
-              <Text style={styles.h2}>Nos alegra que te unas a nosotros</Text>
+          <View style={styles.container}>
+            <View style={[gStyles.formContainer, styles.content]}>
+              <View style={gStyles.formContent} >
+                <Text style={gStyles.h2}>Nos alegra que te unas a nosotros</Text>
 
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>Nombre del proyecto</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Nombre del proyecto"
-                  keyboardType="default"
+                <CreateForm/>
+
+                <UploadImage
+                  
                 />
-              </View>
 
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>Descripción</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Descripción"
-                  keyboardType="default"
-                />
-              </View>
+                
 
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>Categoria</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Categoria"
-                  keyboardType="default"
-                />
-              </View>
 
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>Etiquetas (Animales, Salud, Alimento)</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Etiquetas (Animales, Salud, Alimento)"
-                  keyboardType="default"
-                />
-              </View>
 
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>Ubicación</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Ubicación"
-                  keyboardType="default"
-                />
               </View>
-
-              <View style={styles.formTextInput}>
-                <Text style={styles.labelInput}>¿Que ha hecho usted por este proyecto?</Text>
-                <TextInput
-                  style={styles.inputLabel}
-                  placeholder="Descripción"
-                  keyboardType="default"
-                />
-              </View>
-
-              <Button
-                title="subir imagen"
-                color="green"
-              />
             </View>
           </View>
         </ScrollView>
+      </SafeAreaView>
     )
+}
 
-  }
-  
+function UploadImage() {
+    return(
+      <ScrollView
+        style={styles.viewImage}
+      >
+        <View style={styles.containerIcon}>
+        <Image
+          style={styles.icon}
+          source={require('../../../assets/Icons/camera.png')}
+        />
+        </View>
+      </ScrollView>
+    )
 }
