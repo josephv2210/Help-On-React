@@ -1,4 +1,6 @@
-import { View, Text, TextInput,  } from 'react-native'
+import { View, Text, TextInput, StyleSheet} from 'react-native'
+import gStyles from '../../../styles/generalStyles';
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 
 const Home = () => {
@@ -18,7 +20,7 @@ const Home = () => {
       <Text style={styles.textTitle}>¿A quien quieres ayudar hoy?</Text>
       <View style={styles.container}>
         <View style={styles.shearchBar}>
-          <TextInput Value={value} Style={styles.shearchBar} placeholder='Busca y ayuda...'/>
+          {/* <TextInput Value={value} Style={styles.shearchBar} placeholder='Busca y ayuda...'/> */}
         </View>
       </View>
     </View>
